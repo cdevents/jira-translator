@@ -25,10 +25,10 @@ func (pEvent *JiraEvent) HandleIssueCreatedEvent() (string, error) {
 	var issueCreatedEvent IssueCreatedEvent
 	err := json.Unmarshal([]byte(pEvent.Event), &issueCreatedEvent)
 	if err != nil {
-		Log().Error("Error occurred while Unmarshal JSON event into JiraIssueEvent struct", err)
+		Log().Error("Error occurred while Unmarshal issue_created JSON event into IssueCreatedEvent struct", err)
 		return "", err
 	}
-	Log().Info("jira issue_created event received : ", issueCreatedEvent.Issue.Fields.Issuetype.Name, issueCreatedEvent.User.Name, issueCreatedEvent.IssueEventTypeName)
+	Log().Infof("jira %s event translating to dev.cdevents.ticket.created", issueCreatedEvent.IssueEventTypeName)
 	cdEvent, err := issueCreatedEvent.TicketCreatedCDEvent()
 	if err != nil {
 		return "", err
@@ -36,14 +36,14 @@ func (pEvent *JiraEvent) HandleIssueCreatedEvent() (string, error) {
 	return cdEvent, nil
 }
 
-func (pEvent *JiraEvent) HandleIssueUpdatedEvent() (string, error) {
+func (pEvent *JiraEvent) HandleIssueUpdatedEvent(eventType string) (string, error) {
 	var issueUpdatedEvent IssueUpdatedEvent
 	err := json.Unmarshal([]byte(pEvent.Event), &issueUpdatedEvent)
 	if err != nil {
-		Log().Error("Error occurred while Unmarshal JSON event into JiraIssueEvent struct", err)
+		Log().Errorf("Error occurred while Unmarshal %s JSON event into IssueUpdatedEvent struct, %v", eventType, err)
 		return "", err
 	}
-	Log().Info("jira issue_updated event received : ", issueUpdatedEvent.Issue.Fields.Issuetype.Name, issueUpdatedEvent.User.Name, issueUpdatedEvent.IssueEventTypeName)
+	Log().Infof("jira %s event translating to dev.cdevents.ticket.updated", issueUpdatedEvent.IssueEventTypeName)
 	cdEvent, err := issueUpdatedEvent.TicketUpdatedCDEvent()
 	if err != nil {
 		return "", err
@@ -55,10 +55,10 @@ func (pEvent *JiraEvent) HandleIssueCommentedEvent() (string, error) {
 	var issueCommentedEvent IssueCommentedEvent
 	err := json.Unmarshal([]byte(pEvent.Event), &issueCommentedEvent)
 	if err != nil {
-		Log().Error("Error occurred while Unmarshal JSON event into JiraIssueEvent struct", err)
+		Log().Error("Error occurred while Unmarshal issue_commented JSON event into IssueCommentedEvent struct ", err)
 		return "", err
 	}
-	Log().Info("jira issue_commented event received : ", issueCommentedEvent.Issue.Fields.Issuetype.Name, issueCommentedEvent.User.Name, issueCommentedEvent.IssueEventTypeName)
+	Log().Infof("jira %s event translating to dev.cdevents.ticket.updated", issueCommentedEvent.IssueEventTypeName)
 	cdEvent, err := issueCommentedEvent.TicketUpdatedCDEvent()
 	if err != nil {
 		return "", err
@@ -70,11 +70,26 @@ func (pEvent *JiraEvent) HandleIssueAssignedEvent() (string, error) {
 	var issueAssignedEvent IssueAssignedEvent
 	err := json.Unmarshal([]byte(pEvent.Event), &issueAssignedEvent)
 	if err != nil {
-		Log().Error("Error occurred while Unmarshal JSON event into JiraIssueEvent struct", err)
+		Log().Error("Error occurred while Unmarshal issue_assigned JSON event into IssueAssignedEvent struct", err)
 		return "", err
 	}
-	Log().Info("jira issue_assigned event received : ", issueAssignedEvent.Issue.Fields.Issuetype.Name, issueAssignedEvent.User.Name, issueAssignedEvent.IssueEventTypeName)
+	Log().Infof("jira %s event translating to dev.cdevents.ticket.updated", issueAssignedEvent.IssueEventTypeName)
 	cdEvent, err := issueAssignedEvent.TicketUpdatedCDEvent()
+	if err != nil {
+		return "", err
+	}
+	return cdEvent, nil
+}
+
+func (pEvent *JiraEvent) HandleIssueGenericEvent() (string, error) {
+	var issueGenericEvent IssueGenericEvent
+	err := json.Unmarshal([]byte(pEvent.Event), &issueGenericEvent)
+	if err != nil {
+		Log().Error("Error occurred while Unmarshal issue_generic JSON event into IssueGenericEvent struct", err)
+		return "", err
+	}
+	Log().Infof("jira %s event translating to dev.cdevents.ticket.closed", issueGenericEvent.IssueEventTypeName)
+	cdEvent, err := issueGenericEvent.TicketClosedCDEvent()
 	if err != nil {
 		return "", err
 	}

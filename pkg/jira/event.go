@@ -61,8 +61,8 @@ func (pEvent *JiraEvent) TranslateIntoCDEvent() (string, error) {
 		if err != nil {
 			return "", err
 		}
-	case "issue_updated":
-		cdEvent, err = pEvent.HandleIssueUpdatedEvent()
+	case "issue_updated", "issue_work_logged", "issue_worklog_updated", "issue_worklog_deleted":
+		cdEvent, err = pEvent.HandleIssueUpdatedEvent(eventType.(string))
 		if err != nil {
 			return "", err
 		}
@@ -73,6 +73,11 @@ func (pEvent *JiraEvent) TranslateIntoCDEvent() (string, error) {
 		}
 	case "issue_assigned":
 		cdEvent, err = pEvent.HandleIssueAssignedEvent()
+		if err != nil {
+			return "", err
+		}
+	case "issue_generic":
+		cdEvent, err = pEvent.HandleIssueGenericEvent()
 		if err != nil {
 			return "", err
 		}

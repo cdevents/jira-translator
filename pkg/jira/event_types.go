@@ -162,6 +162,12 @@ type Worklog struct {
 	Total      int   `json:"total"`
 	Worklogs   []any `json:"worklogs"`
 }
+type Resolution struct {
+	Self        string `json:"self"`
+	Id          string `json:"id"`
+	Description string `json:"description"`
+	Name        string `json:"name"`
+}
 type Fields struct {
 	Issuetype                     Issuetype         `json:"issuetype"`
 	Timespent                     any               `json:"timespent"`
@@ -170,7 +176,7 @@ type Fields struct {
 	Customfield10110              string            `json:"customfield_10110"`
 	Customfield10111              any               `json:"customfield_10111"`
 	Aggregatetimespent            any               `json:"aggregatetimespent"`
-	Resolution                    any               `json:"resolution"`
+	Resolution                    Resolution        `json:"resolution"`
 	Customfield10107              any               `json:"customfield_10107"`
 	Customfield10108              any               `json:"customfield_10108"`
 	Customfield10109              any               `json:"customfield_10109"`
@@ -264,4 +270,7 @@ type IssueAssignedEvent struct {
 	Issue              Issue     `json:"issue"`
 	Changelog          Changelog `json:"changelog"`
 	Comment            Comments  `json:"comment"`
+}
+type IssueGenericEvent struct {
+	IssueUpdatedEvent
 }
