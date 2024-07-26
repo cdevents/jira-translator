@@ -9,6 +9,7 @@ replace github.com/cdevents/webhook-adapter => github.com/Nordix/webhook-cdevent
 require (
 	github.com/cdevents/sdk-go v0.3.3-0.20240724093315-1078d5069c99
 	github.com/cdevents/webhook-adapter v0.0.0-20240319203345-6d6c6c54f065
+	github.com/go-playground/assert/v2 v2.2.0
 	github.com/hashicorp/go-plugin v1.6.1
 	go.uber.org/zap v1.27.0
 )

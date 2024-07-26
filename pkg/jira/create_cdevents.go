@@ -23,7 +23,7 @@ import (
 )
 
 func (issueCreatedEvent *IssueCreatedEvent) TicketCreatedCDEvent() (string, error) {
-	Log().Info("Creating dev.cdevents.ticket.created for ", issueCreatedEvent.IssueEventTypeName)
+	Log().Info("Creating dev.cdevents.ticket.created for Jira ", issueCreatedEvent.IssueEventTypeName)
 	cdEvent, err := cdevents04.NewTicketCreatedEvent()
 	if err != nil {
 		Log().Error("Error creating CDEvent TicketCreatedEvent, ", err)
@@ -46,7 +46,7 @@ func (issueCreatedEvent *IssueCreatedEvent) TicketCreatedCDEvent() (string, erro
 }
 
 func (issueUpdatedEvent *IssueUpdatedEvent) TicketUpdatedCDEvent() (string, error) {
-	Log().Info("Creating dev.cdevents.ticket.updated for ", issueUpdatedEvent.IssueEventTypeName)
+	Log().Info("Creating dev.cdevents.ticket.updated for Jira ", issueUpdatedEvent.IssueEventTypeName)
 	return createTicketUpdatedCDEvent(
 		issueUpdatedEvent.Issue.Fields.Status.IconURL,
 		issueUpdatedEvent.Issue.ID,
@@ -56,7 +56,7 @@ func (issueUpdatedEvent *IssueUpdatedEvent) TicketUpdatedCDEvent() (string, erro
 }
 
 func (issueCommentedEvent *IssueCommentedEvent) TicketUpdatedCDEvent() (string, error) {
-	Log().Info("Creating dev.cdevents.ticket.updated for ", issueCommentedEvent.IssueEventTypeName)
+	Log().Info("Creating dev.cdevents.ticket.updated for Jira ", issueCommentedEvent.IssueEventTypeName)
 	return createTicketUpdatedCDEvent(
 		issueCommentedEvent.Issue.Fields.Status.IconURL,
 		issueCommentedEvent.Issue.ID,
@@ -66,7 +66,7 @@ func (issueCommentedEvent *IssueCommentedEvent) TicketUpdatedCDEvent() (string, 
 }
 
 func (issueAssignedEvent *IssueAssignedEvent) TicketUpdatedCDEvent() (string, error) {
-	Log().Info("Creating dev.cdevents.ticket.updated for ", issueAssignedEvent.IssueEventTypeName)
+	Log().Info("Creating dev.cdevents.ticket.updated for Jira ", issueAssignedEvent.IssueEventTypeName)
 	return createTicketUpdatedCDEvent(
 		issueAssignedEvent.Issue.Fields.Status.IconURL,
 		issueAssignedEvent.Issue.ID,
@@ -98,7 +98,7 @@ func createTicketUpdatedCDEvent(source, id, uri, updatedBy string, customData in
 }
 
 func (issueGenericEvent *IssueGenericEvent) TicketClosedCDEvent() (string, error) {
-	Log().Info("Creating dev.cdevents.ticket.closed for ", issueGenericEvent.IssueEventTypeName)
+	Log().Info("Creating dev.cdevents.ticket.closed for Jira ", issueGenericEvent.IssueEventTypeName)
 	cdEvent, err := cdevents04.NewTicketClosedEvent()
 	if err != nil {
 		Log().Error("Error creating CDEvent TicketClosedEvent, ", err)
