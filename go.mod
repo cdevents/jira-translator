@@ -7,7 +7,7 @@ toolchain go1.22.5
 replace github.com/cdevents/webhook-adapter => github.com/Nordix/webhook-cdevents-adapter v0.0.0-20240724114025-d156792a38ce
 
 require (
-	github.com/cdevents/sdk-go v0.3.3-0.20240724093315-1078d5069c99
+	github.com/cdevents/sdk-go v0.4.1
 	github.com/cdevents/webhook-adapter v0.0.0-20240319203345-6d6c6c54f065
 	github.com/go-playground/assert/v2 v2.2.0
 	github.com/hashicorp/go-plugin v1.6.1
