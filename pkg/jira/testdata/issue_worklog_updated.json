@@ -1,0 +1,303 @@
+{
+    "timestamp": 1717164704071,
+    "webhookEvent": "jira:worklog_updated",
+    "issue_event_type_name": "issue_worklog_updated",
+    "user": {
+      "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+      "name": "rjalander",
+      "key": "JIRAUSER10000",
+      "emailAddress": "jalander.ramagiri@est.tech",
+      "avatarUrls": {
+        "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+        "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+        "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+        "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+      },
+      "displayName": "jalander.ramagiri@est.tech",
+      "active": true,
+      "timeZone": "Europe/Dublin"
+    },
+    "issue": {
+      "id": "10023",
+      "self": "http://localhost:9090/rest/api/2/issue/10023",
+      "key": "ES-24",
+      "fields": {
+        "issuetype": {
+          "self": "http://localhost:9090/rest/api/2/issuetype/10002",
+          "id": "10002",
+          "description": "Created by Jira Software - do not edit or delete. Issue type for a user story.",
+          "iconUrl": "http://localhost:9090/images/icons/issuetypes/story.svg",
+          "name": "Story",
+          "subtask": false
+        },
+        "timespent": 46800,
+        "project": {
+          "self": "http://localhost:9090/rest/api/2/project/10000",
+          "id": "10000",
+          "key": "ES",
+          "name": "EST-SeaTel",
+          "projectTypeKey": "software",
+          "avatarUrls": {
+            "48x48": "http://localhost:9090/secure/projectavatar?avatarId=10324",
+            "24x24": "http://localhost:9090/secure/projectavatar?size=small&avatarId=10324",
+            "16x16": "http://localhost:9090/secure/projectavatar?size=xsmall&avatarId=10324",
+            "32x32": "http://localhost:9090/secure/projectavatar?size=medium&avatarId=10324"
+          }
+        },
+        "fixVersions": [],
+        "customfield_10110": "0i00053:",
+        "customfield_10111": null,
+        "aggregatetimespent": 46800,
+        "resolution": null,
+        "customfield_10107": null,
+        "customfield_10108": null,
+        "customfield_10109": null,
+        "resolutiondate": null,
+        "workratio": -1,
+        "lastViewed": "2024-05-31T15:11:44.055+0100",
+        "watches": {
+          "self": "http://localhost:9090/rest/api/2/issue/ES-24/watchers",
+          "watchCount": 1,
+          "isWatching": true
+        },
+        "created": "2024-05-29T15:04:18.022+0100",
+        "priority": {
+          "self": "http://localhost:9090/rest/api/2/priority/3",
+          "iconUrl": "http://localhost:9090/images/icons/priorities/medium.svg",
+          "name": "Medium",
+          "id": "3"
+        },
+        "customfield_10100": null,
+        "customfield_10101": null,
+        "customfield_10102": null,
+        "labels": [],
+        "customfield_10103": null,
+        "timeestimate": 0,
+        "aggregatetimeoriginalestimate": null,
+        "versions": [],
+        "issuelinks": [],
+        "assignee": null,
+        "updated": "2024-05-31T15:11:44.070+0100",
+        "status": {
+          "self": "http://localhost:9090/rest/api/2/status/10000",
+          "description": "",
+          "iconUrl": "http://localhost:9090/",
+          "name": "To Do",
+          "id": "10000",
+          "statusCategory": {
+            "self": "http://localhost:9090/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "default",
+            "name": "To Do"
+          }
+        },
+        "components": [],
+        "timeoriginalestimate": null,
+        "description": "CDEvents integration with Jira updates needed",
+        "timetracking": {
+          "remainingEstimate": "0m",
+          "timeSpent": "1d 5h",
+          "remainingEstimateSeconds": 0,
+          "timeSpentSeconds": 46800
+        },
+        "archiveddate": null,
+        "attachment": [],
+        "aggregatetimeestimate": 0,
+        "summary": "CDEvents integration with Jira",
+        "creator": {
+          "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+          "name": "rjalander",
+          "key": "JIRAUSER10000",
+          "emailAddress": "jalander.ramagiri@est.tech",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+          },
+          "displayName": "jalander.ramagiri@est.tech",
+          "active": true,
+          "timeZone": "Europe/Dublin"
+        },
+        "subtasks": [],
+        "reporter": {
+          "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+          "name": "rjalander",
+          "key": "JIRAUSER10000",
+          "emailAddress": "jalander.ramagiri@est.tech",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+          },
+          "displayName": "jalander.ramagiri@est.tech",
+          "active": true,
+          "timeZone": "Europe/Dublin"
+        },
+        "customfield_10000": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@18f7b9f2[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2c60ebe6[byInstanceType={},overall=PullRequestOverallBean{stateCount=0, state='OPEN', details=PullRequestOverallDetails{openCount=0, mergedCount=0, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@38211d67[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@1335ee5e[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@1f3be9e9[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@62027952[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@52788a50[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@6e03d95f[showProjects=false,successfulCount=0,topEnvironments=[],count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2eb701d7[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@5f8e35ba[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@49321e11[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@398bef49[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"details\":{\"openCount\":0,\"mergedCount\":0,\"declinedCount\":0,\"total\":0},\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+        "aggregateprogress": {
+          "progress": 46800,
+          "total": 46800,
+          "percent": 100
+        },
+        "environment": null,
+        "duedate": null,
+        "progress": {
+          "progress": 46800,
+          "total": 46800,
+          "percent": 100
+        },
+        "comment": {
+          "comments": [
+            {
+              "self": "http://localhost:9090/rest/api/2/issue/10023/comment/10019",
+              "id": "10019",
+              "author": {
+                "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+                "name": "rjalander",
+                "key": "JIRAUSER10000",
+                "emailAddress": "jalander.ramagiri@est.tech",
+                "avatarUrls": {
+                  "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+                  "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+                  "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+                  "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+                },
+                "displayName": "jalander.ramagiri@est.tech",
+                "active": true,
+                "timeZone": "Europe/Dublin"
+              },
+              "body": "is the issue fixed?",
+              "updateAuthor": {
+                "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+                "name": "rjalander",
+                "key": "JIRAUSER10000",
+                "emailAddress": "jalander.ramagiri@est.tech",
+                "avatarUrls": {
+                  "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+                  "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+                  "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+                  "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+                },
+                "displayName": "jalander.ramagiri@est.tech",
+                "active": true,
+                "timeZone": "Europe/Dublin"
+              },
+              "created": "2024-05-29T15:22:43.937+0100",
+              "updated": "2024-05-29T15:22:43.937+0100"
+            },
+            {
+              "self": "http://localhost:9090/rest/api/2/issue/10023/comment/10100",
+              "id": "10100",
+              "author": {
+                "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+                "name": "rjalander",
+                "key": "JIRAUSER10000",
+                "emailAddress": "jalander.ramagiri@est.tech",
+                "avatarUrls": {
+                  "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+                  "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+                  "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+                  "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+                },
+                "displayName": "jalander.ramagiri@est.tech",
+                "active": true,
+                "timeZone": "Europe/Dublin"
+              },
+              "body": "updating to Unassigned",
+              "updateAuthor": {
+                "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+                "name": "rjalander",
+                "key": "JIRAUSER10000",
+                "emailAddress": "jalander.ramagiri@est.tech",
+                "avatarUrls": {
+                  "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+                  "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+                  "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+                  "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+                },
+                "displayName": "jalander.ramagiri@est.tech",
+                "active": true,
+                "timeZone": "Europe/Dublin"
+              },
+              "created": "2024-05-31T14:46:23.440+0100",
+              "updated": "2024-05-31T14:46:23.440+0100"
+            }
+          ],
+          "maxResults": 2,
+          "total": 2,
+          "startAt": 0
+        },
+        "votes": {
+          "self": "http://localhost:9090/rest/api/2/issue/ES-24/votes",
+          "votes": 0,
+          "hasVoted": false
+        },
+        "worklog": {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 1,
+          "worklogs": [
+            {
+              "self": "http://localhost:9090/rest/api/2/issue/10023/worklog/10000",
+              "author": {
+                "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+                "name": "rjalander",
+                "key": "JIRAUSER10000",
+                "emailAddress": "jalander.ramagiri@est.tech",
+                "avatarUrls": {
+                  "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+                  "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+                  "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+                  "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+                },
+                "displayName": "jalander.ramagiri@est.tech",
+                "active": true,
+                "timeZone": "Europe/Dublin"
+              },
+              "updateAuthor": {
+                "self": "http://localhost:9090/rest/api/2/user?username=rjalander",
+                "name": "rjalander",
+                "key": "JIRAUSER10000",
+                "emailAddress": "jalander.ramagiri@est.tech",
+                "avatarUrls": {
+                  "48x48": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=48",
+                  "24x24": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=24",
+                  "16x16": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=16",
+                  "32x32": "https://www.gravatar.com/avatar/acc35d47cafd5f3edca6b0f6db7f3921?d=mm&s=32"
+                },
+                "displayName": "jalander.ramagiri@est.tech",
+                "active": true,
+                "timeZone": "Europe/Dublin"
+              },
+              "comment": "Work in progress integrating CDEvents with Jira\r\nWorking with design integration",
+              "created": "2024-05-31T15:07:48.978+0100",
+              "updated": "2024-05-31T15:11:44.058+0100",
+              "started": "2024-05-30T15:06:00.000+0100",
+              "timeSpent": "1d 5h",
+              "timeSpentSeconds": 46800,
+              "id": "10000",
+              "issueId": "10023"
+            }
+          ]
+        },
+        "archivedby": null
+      }
+    },
+    "changelog": {
+      "id": "10102",
+      "items": [
+        {
+          "field": "WorklogId",
+          "fieldtype": "jira",
+          "from": "10000",
+          "fromString": "10000",
+          "to": null,
+          "toString": null
+        }
+      ]
+    }
+  }
+  
